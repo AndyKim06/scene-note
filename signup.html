@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입 — SceneNote</title>
+  <meta name="description" content="SceneNote에 가입하고 단편영화 기획을 시작하세요." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 배경 장식 요소 -->
+  <div class="bg-orb bg-orb--1"></div>
+  <div class="bg-orb bg-orb--2"></div>
+  <div class="bg-orb bg-orb--3"></div>
+
+  <!-- 필름 스트립 장식 -->
+  <div class="film-strip film-strip--left">
+    <div class="film-holes">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="film-strip film-strip--right">
+    <div class="film-holes">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- 뒤로가기 -->
+  <a id="back-btn" class="back-link" href="index.html">← 홈으로</a>
+
+  <!-- 회원가입 카드 -->
+  <main class="login-wrapper">
+    <div class="login-card">
+
+      <!-- 로고 영역 -->
+      <div class="login-header">
+        <div class="logo-icon">🎬</div>
+        <h1 class="logo-title">SceneNote</h1>
+        <p class="logo-subtitle">새 계정을 만들어 시작하세요</p>
+      </div>
+
+      <!-- 구분선 -->
+      <div class="divider"></div>
+
+      <!-- 회원가입 폼 -->
+      <form id="signup-form" class="login-form" onsubmit="return false;">
+
+        <div class="input-group">
+          <label for="signup-name" class="input-label">이름</label>
+          <div class="input-wrapper">
+            <span class="input-icon">👤</span>
+            <input
+              type="text"
+              id="signup-name"
+              name="name"
+              class="input-field"
+              placeholder="이름을 입력하세요"
+              autocomplete="name"
+            />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="signup-email" class="input-label">이메일</label>
+          <div class="input-wrapper">
+            <span class="input-icon">✉</span>
+            <input
+              type="email"
+              id="signup-email"
+              name="email"
+              class="input-field"
+              placeholder="이메일을 입력하세요"
+              autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="signup-password" class="input-label">비밀번호</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🔒</span>
+            <input
+              type="password"
+              id="signup-password"
+              name="password"
+              class="input-field"
+              placeholder="비밀번호를 입력하세요"
+              autocomplete="new-password"
+            />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="signup-password-confirm" class="input-label">비밀번호 확인</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🔐</span>
+            <input
+              type="password"
+              id="signup-password-confirm"
+              name="password-confirm"
+              class="input-field"
+              placeholder="비밀번호를 다시 입력하세요"
+              autocomplete="new-password"
+            />
+          </div>
+        </div>
+
+        <button type="submit" id="signup-btn" class="btn-login" onclick="handleSignup()">
+          <span class="btn-text">회원가입</span>
+          <span class="btn-arrow">→</span>
+        </button>
+
+      </form>
+
+      <!-- 로그인 이동 -->
+      <p class="auth-switch">
+        이미 계정이 있으신가요?
+        <a id="go-login-link" href="login.html" class="auth-link">로그인</a>
+      </p>
+
+    </div>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

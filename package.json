@@ -1,0 +1,11 @@
+{
+  "name": "scene-note",
+  "version": "1.0.0",
+  "description": "단편영화 기획 노트 툴",
+  "main": "index.html",
+  "scripts": {
+    "start": "node -e \"require('http').createServer((req,res)=>{res.end('OK')}).listen(3000)\""
+  },
+  "author": "이병현",
+  "license": "MIT"
+}
